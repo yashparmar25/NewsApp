@@ -123,7 +123,7 @@ class _HomeState extends State<Home> {
                     CarouselSlider.builder(
                       itemCount: slider.length,
                       itemBuilder: (context, index, realIndex) {
-                        String image = 'assets/images/sport.jpg';
+                        String image = slider[index].urlToImage!;
                         String name = slider[index].title ?? 'No Title';
                         return buildImage(image, name);
                       },
@@ -177,7 +177,7 @@ class _HomeState extends State<Home> {
                             url: articles[index].url ?? '',
                             desc: articles[index].description ??
                                 'No description available',
-                            imageUrl: 'assets/images/sport.jpg',
+                            imageUrl: articles[index].urlToImage!,
                             title:
                                 articles[index].title ?? 'No title available',
                           );

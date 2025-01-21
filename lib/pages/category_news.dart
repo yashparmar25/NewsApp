@@ -59,7 +59,8 @@ class _CategoryNewsState extends State<CategoryNews> {
               itemCount: categories.length,
               itemBuilder: (context, index) {
                 return ShowCategory(
-                    image: 'assets/images/sport.jpg', // Use actual image URL
+                    image:
+                        categories[index].urlToImage!, // Use actual image URL
                     desc: categories[index].description ??
                         'No description available',
                     title: categories[index].title ?? 'No title available',
